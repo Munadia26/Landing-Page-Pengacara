@@ -1,32 +1,24 @@
+import gallery1 from '@/assets/Gallery/Gallery1.png';
+import gallery2 from '@/assets/Gallery/Gallery2.png';
+import gallery3 from '@/assets/Gallery/Gallery3.png';
+
 export const gallery = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=800",
-    title: "Konsultasi Hukum",
-    description: "Sesi diskusi mendalam mengenai permasalahan hukum klien."
+    image: gallery1,
+    title: "Pelantikan PERADI",
+    description: "Sesi diskusi mendalam dan pelantikan PERADI bersama Otto Hasibuan"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800",
-    title: "Penandatanganan Dokumen",
-    description: "Proses legalisasi dan penandatanganan berkas perkara."
+    image: gallery2,
+    title: "Partisipasi LKBH AMANAH dalam Forum Kebersamaan",
+    description: "Kehadiran LKBH AMANAH dalam kegiatan forum sebagai wujud komitmen memperkuat pelayanan konsultasi dan bantuan hukum di wilayah Magelang dan sekitarnya."
   },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800",
-    title: "Pertemuan Strategis",
-    description: "Diskusi tim advokat dalam membedah kasus hukum."
-  },
-  {
-    id: 4,
-    image: "https://images.unsplash.com/photo-1423592707957-3b212afa6733?auto=format&fit=crop&q=80&w=800",
-    title: "Mediasi Klien",
-    description: "Proses penyelesaian sengketa di luar pengadilan."
-  },
-  {
-    id: 5,
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800",
-    title: "Riset Hukum",
-    description: "Pendalaman materi hukum untuk memperkuat posisi kasus."
-  }
+{
+  id: 3,
+    image: gallery3,
+    title: "Madrasah Kader Advokat & Paralegal Lembaga Bantuan Hukum Muhammadiyah Bersama Para Pendekar Hukum",
+    description:"",
+}
 ];

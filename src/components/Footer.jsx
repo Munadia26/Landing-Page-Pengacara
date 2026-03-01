@@ -16,7 +16,7 @@ const Footer = () => {
               <span>AMANAH</span>
             </a>
             <p className="text-white/60 text-lg leading-relaxed max-w-sm italic text-justify">
-              LKBH AMANAH adalah lembaga Konsultasi dan Bantuan Hukum yang beralamat di Jalan Soekarno Hatta Dusun Pangonan Desa Deyangan Kota Mungkid Kab Magelang. Melayani jasa dalam menangani perkara hukum yang ada di wilayah yurisdiksi pengadilan agama dan pengadilan negeri di wilayah kabupaten dan kota Magelang pada khusunya dan seluruh kota di Indonesia pada umumnya.
+              {profile.description}
             </p>
            
           </div>

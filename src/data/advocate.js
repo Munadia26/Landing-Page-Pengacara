@@ -1,5 +1,5 @@
 
-import advocatePhoto from '@/assets/Supriyadi.jpg'; 
+import advocatePhoto from '@/assets/Supriyadi1.jpeg'; 
 
 export const advocate = {
   name: "SUPRIYADI, SH",
