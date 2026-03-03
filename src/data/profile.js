@@ -2,18 +2,18 @@
 import Profileimage from '@/assets/ProfileBackground.png';
 
 export const profile = {
-  name: "LKBH AMANAH",
-  badge: "Mitra Hukum Profesional Anda",
-  headline: "Keadilan yang Amanah & Terpercaya untuk Hak-Hak Hukum Anda",
-  subheading: "Lembaga Konsultasi & Bantuan Hukum (LKBH) AMANAH siap memberikan layanan hukum profesional dengan integritas tinggi dan transparansi penuh.",
+  name: import.meta.env.VITE_ORG_NAME,
+  badge: import.meta.env.VITE_ORG_BADGE,
+  headline: import.meta.env.VITE_ORG_HEADLINE,
+  subheading: import.meta.env.VITE_ORG_SUBHEADING,
   aboutImage: Profileimage,
-  description: " LKBH AMANAH adalah lembaga Konsultasi dan Bantuan Hukum  yang beralamat di Jalan Soekarno Hatta Dusun Pangonan Desa Deyangan Kota Mungkid Kab Magelang. Melayani jasa dalam menangani perkara hukum yang ada di wilayah yurisdiksi pengadilan agama dan pengadilan negeri di wilayah kabupaten dan kota Magelang pada khususnya dan seluruh kota di Indonesia pada umumnya.",
+  description: import.meta.env.VITE_ORG_DESCRIPTION,
   contact: {
-    address: "Jl. Soekarno-Hatta, Panggonan, Deyangan, Kecamatan Mertoyudan, Kabupaten Magelang.",
-    phone: "0816 422 6931",
-    phone1: "0821 3438 6381",
-    phone2: "0819 0428 6625",
-    email: "Supriadi.advokat@gmail.com",
-    whatsapp: "628164226931"
+    address: import.meta.env.VITE_CONTACT_ADDRESS,
+    phone: import.meta.env.VITE_CONTACT_PHONE,
+    email: import.meta.env.VITE_CONTACT_EMAIL,
+    whatsapp: import.meta.env.VITE_CONTACT_WHATSAPP,
+    mapUrl: import.meta.env.VITE_MAP_URL,
+    youtubeUrl: import.meta.env.VITE_YOUTUBE_CHANNEL_URL,
   }
 };

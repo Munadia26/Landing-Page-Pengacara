@@ -1,12 +1,13 @@
 
-import advocatePhoto from '@/assets/Supriyadi1.jpeg'; 
+import advocatePhoto from '@/assets/Supriyadi1.jpeg';
 
 export const advocate = {
-  name: "SUPRIYADI, SH",
+  name: import.meta.env.VITE_ADVOCATE_NAME,
   image: advocatePhoto,
-  title: "Advokat & Konsultan Hukum Utama",
-  status: "Advokat",
+  title: import.meta.env.VITE_ADVOCATE_TITLE,
+  status: import.meta.env.VITE_ADVOCATE_STATUS,
   contact: {
-    whatsapp: "628164226931",
-  }
+    whatsapp: import.meta.env.VITE_ADVOCATE_WHATSAPP,
+  },
+  videoUrl: import.meta.env.VITE_YOUTUBE_URL,
 };

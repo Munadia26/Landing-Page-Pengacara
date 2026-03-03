@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from '../components/Hero';
 import ProfileContact from '../components/ProfileContact';
 import Services from '../components/Services';
@@ -7,6 +6,7 @@ import Advocate from '../components/Advocate';
 import Gallery from '../components/Gallery';
 import Articles from '../components/Articles';
 import Partners from '../components/Partners';
+import YouTubeLive from '../components/YouTubeLive';
 
 // Data untuk pengecekan (Conditional Rendering)
 import { articles } from '../data/articles';
@@ -18,10 +18,11 @@ const Home = () => {
     <>
       <Hero />
       <ProfileContact />
+      <YouTubeLive />
       <Services />
       <CallToAction />
       <Advocate />
-      
+
       {/* Menampilkan section hanya jika datanya ada */}
       {gallery && gallery.length > 0 && <Gallery />}
       {articles && articles.length > 0 && <Articles />}
