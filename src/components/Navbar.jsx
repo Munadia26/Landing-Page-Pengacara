@@ -15,7 +15,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(profile.contact.address)}`;
 
   const WaIcon = ({ size = 14 }) => (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
@@ -31,7 +30,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4 md:px-12 py-2 flex flex-col lg:flex-row items-center justify-between gap-y-2 lg:gap-4 text-[11px] md:text-xs font-bold uppercase tracking-tight">
 
           {/* Alamat - Terpotong rapi di mobile jika terlalu panjang */}
-          <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-center lg:text-left">
+          <a href={profile.contact.mapUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-center lg:text-left">
             <MapPin size={14} className="shrink-0" />
             <span className="line-clamp-1 lg:line-clamp-none text-[11px]">{profile.contact.address}</span>
           </a>
@@ -47,14 +46,7 @@ const Navbar = () => {
             <div className="flex items-center gap-2 sm:border-l border-[#0f1c2e]/20 sm:pl-4">
               <WaIcon size={14} />
               <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 text-[11px]">
-                {[profile.contact.phone, profile.contact.phone1, profile.contact.phone2].map((num, i) => (
-                  <React.Fragment key={i}>
-                    {i > 0 && <span className="opacity-40 hidden sm:inline">|</span>}
-                    <a href={`https://wa.me/${num.replace(/\D/g, '')}`} target="_blank" className="hover:text-white transition-colors whitespace-nowrap">
-                      {num}
-                    </a>
-                  </React.Fragment>
-                ))}
+                {profile.contact.phone}
               </div>
             </div>
           </div>
@@ -118,18 +110,15 @@ const Navbar = () => {
 
             {/* Info Kontak Lengkap di Mobile Dropdown */}
             <div className="mt-4 pt-4 space-y-4">
-              <a href={googleMapsUrl} target="_blank" className="flex items-start gap-3 text-white/70 text-xs">
+              <a href={profile.contact.mapUrl} target="_blank" className="flex items-start gap-3 text-white/70 text-xs" rel="noreferrer">
                 <MapPin size={18} className="text-[#c9a84c] shrink-0" /> {profile.contact.address}
               </a>
               <a href={`mailto:${profile.contact.email}`} className="flex items-center gap-3 text-white/70 text-xs">
                 <Mail size={18} className="text-[#c9a84c]" /> {profile.contact.email}
               </a>
               <div className="grid grid-cols-1 gap-3 border-l border-[#c9a84c]/40 pl-4">
-                {[profile.contact.phone, profile.contact.phone1, profile.contact.phone2].map((num, i) => (
-                  <a key={i} href={`https://wa.me/${num.replace(/\D/g, '')}`} target="_blank" className="flex items-center gap-3 text-white/70 text-xs">
-                    <WaIcon size={16} /> {num}
-                  </a>
-                ))}
+                <WaIcon size={16} />
+                {profile.contact.phone}
               </div>
             </div>
           </div>

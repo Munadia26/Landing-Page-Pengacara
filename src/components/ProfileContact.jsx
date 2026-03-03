@@ -56,7 +56,18 @@ const ProfileContact = () => {
                 </div>
                 <div>
                   <h4 className="text-white/50 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1">Alamat Kantor</h4>
-                  <p className="text-sm md:text-base leading-snug">{profile.contact.address}</p>
+                  <p className="text-sm md:text-base leading-snug mb-3">{profile.contact.address}</p>
+                  <a
+                    href={profile.contact.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-[hsl(var(--gold))] hover:text-white text-xs font-bold uppercase tracking-wider transition-colors duration-300 group/map"
+                  >
+                    <span>Lihat di Google Maps</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 transform group-hover/map:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
                 </div>
               </div>
 

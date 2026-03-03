@@ -1,6 +1,7 @@
 import React from 'react';
 import { profile } from '../data/profile';
 import { advocate } from '../data/advocate';
+import { Youtube } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -28,9 +29,29 @@ const Hero = () => {
             ))}
           </h1>
 
-          <p className="text-base md:text-lg text-white/70 max-w-xl leading-relaxed text-justify">
-            {profile.subheading}
-          </p>
+          <div className="space-y-4">
+            <p className="text-base md:text-lg text-white/70 max-w-xl leading-relaxed text-justify">
+              {profile.subheading}
+            </p>
+
+            {/* Social Media Link */}
+            {profile.contact.youtubeUrl && (
+              <a
+                href={profile.contact.youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-3 text-white/60 hover:text-[hsl(var(--gold))] transition-all duration-300 group/social"
+              >
+                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover/social:bg-red-600 group-hover/social:border-red-600 transition-all duration-300">
+                  <Youtube size={20} className="text-current" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-bold uppercase tracking-widest opacity-50">Ikuti Kami</span>
+                  <span className="text-sm font-medium">LKBH Amanah YouTube</span>
+                </div>
+              </a>
+            )}
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a

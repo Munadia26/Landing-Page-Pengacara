@@ -41,9 +41,16 @@ const Footer = () => {
               <span className="ml-4 w-12 h-1 bg-[hsl(var(--gold))] rounded-full"></span>
             </h4>
             <div className="space-y-5 md:space-y-6">
-              <div className="flex items-start space-x-4 md:space-x-6">
+              <div className="flex items-start space-x-4 md:space-x-6 group">
                 <MapPin className="text-[hsl(var(--gold))] shrink-0 mt-1 size-5 md:size-6" />
-                <p className="text-white/60 text-sm md:text-lg">{profile.contact.address}</p>
+                <a
+                  href={profile.contact.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 text-sm md:text-lg hover:text-[hsl(var(--gold))] transition-colors duration-300"
+                >
+                  {profile.contact.address}
+                </a>
               </div>
               <div className="flex items-start space-x-4 md:space-x-6">
                 {/* Ikon tetap di samping (kiri) */}
